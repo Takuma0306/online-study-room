@@ -120,7 +120,6 @@ def read(id):
 
 #削除画面
 @app.route('/delete/<int:id>', methods = ['GET', 'POST'])
-@login_required
 def delete(id):
     post = Post.query.get(id)
     db.session.delete(post)
