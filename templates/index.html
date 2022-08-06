@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>TOP | オンライン自習室</title>
+{% endblock %}
+
+{% block body %}
+<h4 style="margin:50px; text-align: center;">↓今勉強している人たち↓</h4>
+<p style="text-align: center;">※他の人の勉強終了！ボタンは押さないでください。</p>
+
+{% for post in posts %}
+<div class="card w-50 mb-3" style="margin: auto;">
+    <div class="card-body">
+      <h4 class="card-title">{{ post.name }}さんが勉強中です。</h4>
+      <p>勉強内容 : {{ post.detail }}</p>
+      <p>開始時間 : {{post.start_time.time() }}</p>
+      <a  class="btn btn-primary btn-sm" href = '/finish/{{ post.id }}' role = "button">勉強終了！</a>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

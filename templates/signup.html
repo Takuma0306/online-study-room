@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>新規登録 | オンライン自習室</title>
+{% endblock %}
+
+{% block body %}
+<div class="my-3 mx-5" style = "width:70%; text-align:center;">
+    <h3>新規登録画面</h3>
+    <p>個人が特定されるような情報はやめてください。</p>
+</div>
+<form method="POST">
+    <div class="my-3 mx-5" style = "width:70%; text-align:center;">
+        <label for="username" class="form-label">ユーザ名</label>
+        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">同じ名前のユーザーが存在する可能性があります。後ろに数字を付けるなど区別できるようにすることをお勧めします。</div>
+    </div>
+    <div class="my-3 mx-5" style="width:70%; text-align:center;">
+        <label for="password" class="form-label">パスワード</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        <div id="emailHelp" class="form-text">個人情報が含まれるパスワードはやめてください。</div>
+    </div>
+    <div class="my-3 mx-5" style="width:70%; text-align:center;">
+        <input type="submit" class="btn btn-primary" value="新規登録">
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>学習開始 | オンライン自習室</title>
+{% endblock %}
+
+{% block body %}
+
+<form action = "/" method = "POST">
+    <div class="input-group flex-nowrap my-3 mx-5" style = "width:70%; text-align:center;">
+        <span class="input-group-text" id="addon-wrapping" style = "width:90px;">名前</span>
+        <input type="text" value={{name}} class="form-control" name="name" aria-label="Username" aria-describedby="addon-wrapping" readonly>
+    </div>
+    <div class="input-group flex-nowrap my-3 mx-5" style ="width:70%;">
+        <span class="input-group-text" id="addon-wrapping">学習内容</span>
+        <input type="text" class="form-control" name="detail" aria-label="Username" aria-describedby="addon-wrapping">
+    </div>
+    <div class="my-3 mx-5" style="width:70%; text-align:center;" >
+        <input type = "submit" value = "勉強開始！" class="btn btn-primary">
+    </div>
+
+
+</form>
+{% endblock %}

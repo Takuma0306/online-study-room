@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>終了 | オンライン自習室</title>
+{% endblock %}
+
+{% block body %}
+<style>
+    h2 {text-align: center;}
+</style>
+
+<h2>{{ post.name }}さん、お疲れ様でした！</h2>
+
+<form action = "/delete/{{ post.id }}" method = 'POST'>
+    <div class="card w-50 mb-3" style="margin: auto;">
+        <div class="card-body">
+          <h5 class="card-title mb-2">今回の勉強実績</h5>
+          <h6 class="card-text">学習内容→{{ post.detail }}</h6>
+          <h6 class="card-text">学習時間→{{ td }} </h6>
+          <h6 class="card-text">開始時刻→{{post.start_time}}</h6>
+          <h6 class="card-text">終了時刻→{{finish_time}}</h6>
+          <h6 class="card-text">累計学習時間→{{total}}時間</h6>
+          <p class="card-text text-muted">閉じるボタンを押してください。押さないとデータが消えません。</p>
+          <a class="btn btn-success btn-sm" href = '/delete/{{ post.id }}' role = "button">閉じる</a>
+        </div>
+    </div>
+</form>
+{% endblock %}

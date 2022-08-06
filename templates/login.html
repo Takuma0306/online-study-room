@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ログイン | オンライン自習室</title>
+{% endblock %}
+
+{% block body %}
+<div class="my-3 mx-5" style = "width:70%; text-align:center;">
+    <h3>ログイン画面</h3>
+    <p>ユーザー名とパスワードを入力してください。</p>
+</div>
+<form method="POST">
+    <div class="my-3 mx-5" style = "width:70%; text-align:center;">
+        <label for="username" class="form-label">ユーザ名</label>
+        <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="my-3 mx-5" style="width:70%; text-align:center;">
+        <label for="password" class="form-label">パスワード</label>
+        <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="my-3 mx-5" style="width:70%; text-align:center;">
+        <input type="submit" class="btn btn-primary" value="ログイン">
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>マイページ | オンライン自習室</title>
+{% endblock %}
+
+{% block body %}
+<div class="my-3 mx-5" style = "width:70%; text-align:center;">
+    <h3>{{ user.username}}さん、マイページへようこそ！</h3>
+    <div class="card w-50 my-5" style="margin: auto; background-color: #b0c4de;">
+        <div class="card-body">
+        <p class="card-text">現在の累計学習時間は【{{ user.total }}時間】です。</p>
+        <p class="card-text">現在のランクは【{{ rank }}】です。</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
